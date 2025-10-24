@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Exclusão de Dados do Usuário — Liqday | Pageware</title>
+<style>
+:root{
+  --brand-primary: #1d2f46;
+  --brand-accent: #3eba74;
+  --brand-light: #f3f4f5;
+  --brand-muted: #366060;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial,'Noto Sans','Liberation Sans',sans-serif;background:var(--brand-light);color:#0b1726}
+.header{display:flex;align-items:center;gap:16px;padding:24px;background:var(--brand-primary);color:white}
+.header img{height:40px; width:auto}
+.header .title{font-size:22px;font-weight:700;line-height:1.2}
+.container{max-width:980px;margin:24px auto;padding:24px;background:white;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.06)}
+.tabs{display:flex;gap:8px;border-bottom:2px solid #eef2f7}
+.tab{border:none;background:transparent;padding:12px 16px;font-weight:600;color:#334155;cursor:pointer;border-radius:10px 10px 0 0}
+.tab.active{background:var(--brand-light);color:var(--brand-primary);border:1px solid #e5e7eb;border-bottom:2px solid var(--brand-light)}
+.section h2{color:var(--brand-primary)}
+.section h3{color:var(--brand-accent)}
+.badge{display:inline-block;background:var(--brand-accent);color:white;border-radius:999px;padding:2px 10px;font-weight:700;font-size:12px;margin-left:8px}
+a{color:var(--brand-accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.footer{margin-top:24px;padding-top:16px;border-top:1px solid #e5e7eb;color:#475569;font-size:14px}
+.callout{background:linear-gradient(0deg,rgba(0,0,0,.02),rgba(0,0,0,.02));border-left:4px solid var(--brand-accent);padding:14px 16px;border-radius:8px;margin:16px 0}
+ul{padding-left:20px}
+</style>
+</head>
+<body>
+  <header class="header">
+    <img src="img/liqday-1024-1024.svg" style="width: 100px; height: auto;"  alt="Liqday logo"/>
+    <div class="title">Exclusão de Dados do Usuário <span class="badge"></span></div>
+  </header>
+  <main class="container">
+    <nav class="tabs">
+      <button class="tab" id="tab-pt" onclick="switchTab('pt')">Português</button>
+      <button class="tab" id="tab-es" onclick="switchTab('es')">Español</button>
+      <button class="tab" id="tab-en" onclick="switchTab('en')">English</button>
+    </nav>
+    <section id="pane-pt" class="pane section">
+<h2>Exclusão de Dados do Usuário</h2>
+<p>Você pode solicitar a <strong>exclusão total ou parcial</strong> de seus dados pessoais a qualquer momento, conforme a LGPD.</p>
+<h3>Como solicitar</h3>
+<ul>
+  <li>Envie e-mail para <a href="mailto:privacidade@pageware.com.br">privacidade@pageware.com.br</a> com o assunto: "Exclusão de Dados".</li>
+  <li>Informe nome completo e CPF/CNPJ (ou e-mail cadastrado).</li>
+  <li>Podemos solicitar confirmação de identidade.</li>
+</ul>
+<h3>Prazos e retenção</h3>
+<p>Processo concluído em até <strong>15 dias úteis</strong>. Alguns dados poderão ser retidos para obrigações legais, fiscais, segurança e antifraude.</p>
+<h3>Exclusão técnica</h3>
+<ul>
+  <li>Remoção/anonimização em bancos de dados;</li>
+  <li>Revogação de tokens e acesso;</li>
+  <li>Exclusão em provedores integrados (WhatsApp API, e-mail, SMS);</li>
+  <li>Registro de auditoria do atendimento.</li>
+</ul>
+<div class="callout">Após validação, sua exclusão será definitiva e irreversível.</div>
+</section>
+    <section id="pane-es" class="pane section" style="display:none">
+<h2>Eliminación de Datos del Usuario</h2>
+<p>Puedes solicitar la <strong>eliminación total o parcial</strong> de tus datos personales en cualquier momento.</p>
+<h3>Cómo solicitar</h3>
+<ul>
+  <li>Envía un correo a <a href="mailto:privacidad@pageware.com.br">privacidad@pageware.com.br</a> con asunto: "Eliminación de Datos".</li>
+  <li>Incluye nombre completo y documento o correo registrado.</li>
+  <li>Podríamos solicitar confirmación de identidad.</li>
+</ul>
+<h3>Plazos y retención</h3>
+<p>Procesamos en hasta <strong>15 días hábiles</strong>. Algunos datos pueden conservarse por obligaciones legales, fiscales y de seguridad.</p>
+<h3>Eliminación técnica</h3>
+<ul>
+  <li>Remoción/anonimización en bases de datos;</li>
+  <li>Revocación de tokens y accesos;</li>
+  <li>Eliminación en proveedores integrados;</li>
+  <li>Registro de auditoría del proceso.</li>
+</ul>
+<div class="callout">Una vez validado, el borrado es permanente e irreversible.</div>
+</section>
+    <section id="pane-en" class="pane section" style="display:none">
+<h2>User Data Deletion</h2>
+<p>You may request <strong>full or partial deletion</strong> of your personal data at any time.</p>
+<h3>How to request</h3>
+<ul>
+  <li>Email <a href="mailto:privacy@pageware.com.br">privacy@pageware.com.br</a> with subject: "Data Deletion Request".</li>
+  <li>Provide full name and tax ID or registered email.</li>
+  <li>Identity confirmation may be required.</li>
+</ul>
+<h3>Timing & retention</h3>
+<p>Processed within <strong>15 business days</strong>. Certain data may be retained for legal, tax, security and anti‑fraud reasons.</p>
+<h3>Technical deletion</h3>
+<ul>
+  <li>Removal/anonimization in databases;</li>
+  <li>Revocation of tokens and access;</li>
+  <li>Deletion at integrated providers (WhatsApp API, email, SMS);</li>
+  <li>Audit logging.</li>
+</ul>
+<div class="callout">Once validated, deletion is permanent and irreversible.</div>
+</section>
+    <div class="footer">
+      © 2025 Pageware Tecnologia Ltda. — Liqday. Todos os direitos reservados.
+    </div>
+  </main>
+<script>
+function switchTab(lang){
+  const tabs = document.querySelectorAll('.tab');
+  const panes = document.querySelectorAll('.pane');
+  tabs.forEach(t=>t.classList.remove('active'));
+  panes.forEach(p=>p.style.display='none');
+  document.getElementById('tab-'+lang).classList.add('active');
+  document.getElementById('pane-'+lang).style.display='block';
+}
+window.addEventListener('DOMContentLoaded',()=>switchTab('pt'));
+</script>
+</body>
+</html>

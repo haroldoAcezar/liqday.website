@@ -1,0 +1,20 @@
+{
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": ["/images/*", "/css/*", "/js/*"]
+  },
+  "routes": [
+    {      
+      "route": "/politicadeprivacidade",
+      "rewrite": "/politicaprivacidade_liqday.html"
+    },
+    {
+      "route": "/termodeuso",
+      "rewrite": "/termosdeservico_liqday.html"
+    },
+    {
+      "route": "/exclusaodedados",
+      "rewrite": "/exclusaodedados_liqday.html"
+    }    
+  ]
+}
