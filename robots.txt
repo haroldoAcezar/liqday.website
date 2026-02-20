@@ -1,0 +1,30 @@
+User-agent: *
+Allow: /
+
+# Bloquear áreas administrativas e técnicas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /app/
+Disallow: /dashboard/
+Disallow: /login/
+Disallow: /register/
+Disallow: /account/
+Disallow: /config/
+Disallow: /internal/
+
+# Bloquear arquivos sensíveis
+Disallow: /*.json$
+Disallow: /*.config$
+Disallow: /*.env$
+Disallow: /bin/
+Disallow: /obj/
+
+# Permitir recursos essenciais
+Allow: /*.css$
+Allow: /*.js$
+Allow: /assets/
+Allow: /images/
+Allow: /img/
+
+# Sitemap
+Sitemap: https://www.liqday.com.br/sitemap.xml
