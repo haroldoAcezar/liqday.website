@@ -97,6 +97,24 @@
         .step-connector {
           @apply hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-brand/20 transform -translate-y-1/2;
         }
+
+        @keyframes slide-vertical {
+          0%, 28% { transform: translateY(0); }
+          33%, 61% { transform: translateY(-33.333%); }
+          66%, 94% { transform: translateY(-66.666%); }
+          100% { transform: translateY(0); }
+        }
+        .mobile-carousel {
+          display: flex;
+          flex-direction: column;
+          height: 300%;
+          animation: slide-vertical 12s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
+        }
+        .mobile-carousel img {
+          height: 33.333%;
+          object-fit: cover;
+          width: 100%;
+        }
     </style>
   </head>
   <body class="font-sans antialiased text-brand-dark">
@@ -250,7 +268,7 @@
           Sua gestão na <span class="text-brand">palma da mão</span>
         </h2>
         <p class="text-lg text-slate-500 mb-10 leading-relaxed">
-          ---- ---- .
+          Alcance seus clientes onde eles realmente estão. Com notificações automáticas via WhatsApp, você envia avisos de vencimento, lembretes de atraso e propostas de acordo de forma direta, personalizada e com alta taxa de leitura. Cada mensagem pode conter link de pagamento, segunda via de boleto ou acesso ao portal de negociação, reduzindo fricção e acelerando o recebimento.
         </p>
         <ul class="space-y-6">
           <li class="flex gap-4">
