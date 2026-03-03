@@ -420,17 +420,17 @@
         <p class="text-slate-500 text-lg">Assista a uma demonstração rápida de como automatizar sua primeira régua em menos de 2 minutos.</p>
       </div>
       <div class="relative aspect-video rounded-3xl overflow-hidden shadow-2xl border-8 border-white bg-slate-900 group cursor-pointer">
-        <div class="absolute inset-0 flex items-center justify-center z-10">
-          <!--div class="w-20 h-20 bg-brand text-white rounded-full flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform">
+        <div id="playButton" class="absolute inset-0 flex items-center justify-center z-10">
+          <div class="w-20 h-20 bg-brand text-white rounded-full flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform">
             <span class="material-symbols-outlined !text-4xl">play_arrow</span>
-          </div-->
+          </div>
         </div>
         <div class="absolute inset-0 bg-brand-dark/20 group-hover:bg-brand-dark/10 transition-colors"></div>
         <div class="w-full h-full flex items-center justify-center text-slate-400 font-medium">
-          <video autoplay muted loop playsinline width="100%">
+          <video id="demoVideo" class="w-full h-full object-cover" muted playsinline>
             <source src="/videos/liqday.mp4" type="video/mp4">
               Seu navegador não suporta vídeo HTML5.
-          </video>
+            </video>
         </div>
       </div>
     </div>
@@ -726,5 +726,14 @@
       }
     ]
   }
+  </script>
+  <script>
+    const video = document.getElementById('demoVideo');
+    const playButton = document.getElementById('playButton');
+
+    playButton.addEventListener('click', () => {
+      video.play();
+      playButton.style.display = 'none';
+    });
   </script>
 </html>
